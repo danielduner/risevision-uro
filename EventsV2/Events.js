@@ -277,7 +277,7 @@ RiseVision.Events.EventWidget.prototype.getAdditionalParams = function(name, val
 	    eventWidget.url = "http://www.google.com/calendar/feeds/" + value.calendarID + "/public/full";
 	    
 	    if (prefs.getBool("useDefault")) {
-		eventWidget.layoutURL = eventWidget.isTabbed ? "https://s3.amazonaws.com/Gadget-Events/Layouts/Tabs/Tabs.xml" : "https://s3.amazonaws.com/Gadget-Events/Layouts/List/List.xml";
+		eventWidget.layoutURL = eventWidget.isTabbed ? "https://raw.githubusercontent.com/danielduner/risevision-uro/master/EventsV2/Layouts/Tabs/Tabs.xml" : "https://raw.githubusercontent.com/danielduner/risevision-uro/master/EventsV2/Layouts/List/List.xml";
 	    }
 	    else {	
 		eventWidget.layoutURL = value.layoutURL;
@@ -342,7 +342,7 @@ RiseVision.Events.EventWidget.prototype.init = function() {
 	self.layout = data.getElementsByTagName("Content")[0].childNodes[1].nodeValue;
 
 	if (self.isTabbed) {	    
-	    RiseVision.Common.Utility.loadJS("https://s3.amazonaws.com/Gadget-Events/Layouts/Tabs/Tabs.js", function() {
+	    RiseVision.Common.Utility.loadJS("https://raw.githubusercontent.com/danielduner/risevision-uro/master/EventsV2/Tabs.js", function() {
 		$("#container").append(self.navigation);
 		self.tabs = new Tabs();
 		self.tabs.initTabs(self.daysCount);

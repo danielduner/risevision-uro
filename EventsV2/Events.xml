@@ -167,7 +167,8 @@
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     
 	    <script type="text/javascript" src="https://s3.amazonaws.com/Common-Production/Common/RiseVision.Common.min.js"></script>
-	    <script type="text/javascript" src="https://s3.amazonaws.com/Gadget-Events/Events.min.js"></script>
+	    
+	    <script type="text/javascript" src="https://raw.githubusercontent.com/danielduner/risevision-uro/master/EventsV2/Events.js"></script>
     
             <script type="text/javascript">
 		var prefs = new gadgets.Prefs(),
@@ -240,7 +241,7 @@
     
 	<script type="text/javascript" src="https://s3.amazonaws.com/Common-Production/Common/RiseVision.Common.min.js"></script>
 	<script type="text/javascript" src="https://s3.amazonaws.com/Common-Production/idle-timer/idle-timer.min.js"></script>
-    	<script type="text/javascript" src="https://s3.amazonaws.com/Gadget-Events/Events.min.js"></script>
+    	<script type="text/javascript" src="https://raw.githubusercontent.com/danielduner/risevision-uro/master/EventsV2/Events.js"></script>
     
         <script type="text/javascript">
             var prefs = new gadgets.Prefs(),
