@@ -366,7 +366,7 @@ RiseVision.Events.EventWidget.prototype.initDays = function() {
 	$day.empty();
 	
 	if (i == 0) {
-	    $day.text("Today");
+	    $day.text("Idag");
 	}
 	else {
 	    $day.text(currentDay.toString("dddd"));
@@ -548,14 +548,14 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		}
 		
 		if (isAllDay) {
-		    $content.find(".time:last").html(" - All Day");
+		    $content.find(".time:last").html(" - Hela dagen");
 		}
 		else {
 		    if (this.showDate) {
-			$content.find(".time:last").html($content.find(".time:last").html() + startTime.getDate().toString("h:mmtt").toLowerCase());
+			$content.find(".time:last").html($content.find(".time:last").html() + startTime.getDate().toString("HH:mm").toLowerCase());
 		    }
 		    else {
-			$content.find(".time:last").html(startTime.getDate().toString("h:mmtt").toLowerCase());
+			$content.find(".time:last").html(startTime.getDate().toString("HH:mm").toLowerCase());
 		    }
 		}
 		
