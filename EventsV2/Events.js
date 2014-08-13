@@ -552,10 +552,10 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		}
 		else {
 		    if (this.showDate) {
-			$content.find(".time:last").html("@@@" + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm").toLowerCase());
+			$content.find(".time:last").html($content.find(".time:last").html() + startTime.getDate().toString("HH:mm").toLowerCase());
 		    }
 		    else {
-			$content.find(".time:last").html("@@@" + startTime.getDate().toString("HH:mm").toLowerCase());
+			$content.find(".time:last").html(startTime.getDate().toString("HH:mm").toLowerCase());
 		    }
 		}
 		
