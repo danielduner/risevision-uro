@@ -224,6 +224,11 @@
 	    .error {
 		color: red;
 	    }
+            
+            .time {
+               padding-right: 20px;
+               color: red;
+            }
 	    
 	    __UP_tab_font-style__
 	    __UP_day_font-style__
