@@ -228,6 +228,10 @@
             .time {
                padding-right: 20px;
             }
+
+            .today {
+               color: black;
+            }
 	    
 	    __UP_tab_font-style__
 	    __UP_day_font-style__
@@ -307,3 +311,4 @@
         </script>]]>
 </Content>
 </Module>
+

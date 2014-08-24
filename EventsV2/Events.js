@@ -808,3 +808,4 @@ RiseVision.Events.EventWidget.prototype.handleMove = function(event) {
     
     this.lastY = newY;
 }
+
