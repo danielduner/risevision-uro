@@ -516,10 +516,9 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 	for (var j = 0; j < times.length; j++) {
 	    var startTime = times[j].getStartTime();
 	    var isAllDay = false;
-	    var isToday = currentDay.compareTo(startTime.getDate().clone().clearTime()) == 0
 
 	    var todayDiv = "<div>";
-	    if (isToday) {
+	    if (currentDay.compareTo(startTime.getDate().clone().clearTime()) == 0) {
 		todayDiv = "<div style='color:black'>";
 	    }
 
