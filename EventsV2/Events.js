@@ -366,10 +366,10 @@ RiseVision.Events.EventWidget.prototype.initDays = function() {
 	$day.empty();
 	
 	if (i == 0) {
-	    $day.text("Idag");
+	    $day.text(currentDay.toString("dddd - d MMMM"));
 	}
 	else {
-	    $day.text(currentDay.toString("dddd"));
+	    $day.text(currentDay.toString("dddd - d MMMM"));
 	}
 	
 	currentDay.setDate(currentDay.getDate() + 1);
