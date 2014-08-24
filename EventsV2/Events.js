@@ -516,6 +516,12 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 	for (var j = 0; j < times.length; j++) {
 	    var startTime = times[j].getStartTime();
 	    var isAllDay = false;
+	    var isToday = currentDay.compareTo(startTime.getDate().clone().clearTime()) == 0
+
+	    var todayDiv = "<div>";
+	    if (isToday) {
+		todayDiv = "<div style='color:black'>";
+	    }
 
 	    if (startTime.isDateOnly()) {	//All Day event
 		isAllDay = true;
@@ -541,32 +547,33 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 
 	    //Add event.
 	    if ($content) {
-		$content.find(".title:last").html($content.find(".title:last").html() + eventTitle);
+
+		$content.find(".title:last").html(todayDiv + $content.find(".title:last").html() + eventTitle + "</div>");
 		
 		if (this.showDate) {
-		    $content.find(".date:last").html($content.find(".date:last").html() + startTime.getDate().toString("dddd"));
+		    $content.find(".date:last").html(todayDiv + $content.find(".date:last").html() + startTime.getDate().toString("dddd") + "</div>");
 		}
 		
 		if (isAllDay) {
-		    $content.find(".time:last").html(" - Hela dagen");
+		    $content.find(".time:last").html(todayDiv + "" + "</div>");
 		}
 		else {
 		    if (this.showDate) {
-			$content.find(".time:last").html($content.find(".time:last").html() + startTime.getDate().toString("HH:mm"));
+			$content.find(".time:last").html(todayDiv + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm") + "</div>");
 		    }
 		    else {
-			$content.find(".time:last").html(startTime.getDate().toString("HH:mm"));
+			$content.find(".time:last").html(todayDiv + startTime.getDate().toString("HH:mm") + "</div>");
 		    }
 		}
 		
 		if (location == "") {
-		    $content.find(".location:last").html(location);
+		    $content.find(".location:last").html(todayDiv + location + "</div>");
 		}
 		else {
-		    $content.find(".location:last").html($content.find(".location:last").html() + location);
+		    $content.find(".location:last").html(todayDiv + $content.find(".location:last").html() + location + "</div>");
 		}
 		
-		$content.find(".description:last").html(eventEntry.getContent().getText());
+		$content.find(".description:last").html(todayDiv + eventEntry.getContent().getText() + "</div>");
 	    }
 	}	
     }

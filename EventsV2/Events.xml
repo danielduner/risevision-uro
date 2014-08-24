@@ -230,7 +230,7 @@
             }
 
             .today {
-               color: black;
+               color: black !important;
             }
 	    
 	    __UP_tab_font-style__
