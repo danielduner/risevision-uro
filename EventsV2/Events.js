@@ -520,13 +520,14 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 	    if (startTime.isDateOnly()) {	//All Day event
 		isAllDay = true;
 	    }
+
+	    var currentDay = Date.today();
 	
 	    if (this.isTabbed) {
 		$content = this.tabs.addEvent(this.layout, startTime);
 	    }
 	    else {
-		var self = this,
-		    currentDay = Date.today();
+		var self = this;
 
 		//Add event to appropriate day.
 		$(".day").each(function (i) {
@@ -539,40 +540,40 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		});
 	    }
 
-	    var todayDiv = "<div>";
+	    var todaySpan = "<span>";
 	    if (currentDay.compareTo(startTime.getDate().clone().clearTime()) == 0) {
-		todayDiv = "<div style='color:black'>";
+		todaySpan = "<span style='color:black'>";
 	    }
 
 	    //Add event.
 	    if ($content) {
 
-		$content.find(".title:last").html(todayDiv + $content.find(".title:last").html() + eventTitle + "</div>");
+		$content.find(".title:last").html(todaySpan + $content.find(".title:last").html() + eventTitle + "</span>");
 		
 		if (this.showDate) {
-		    $content.find(".date:last").html(todayDiv + $content.find(".date:last").html() + startTime.getDate().toString("dddd") + "</div>");
+		    $content.find(".date:last").html(todaySpan + $content.find(".date:last").html() + startTime.getDate().toString("dddd") + "</span>");
 		}
 		
 		if (isAllDay) {
-		    $content.find(".time:last").html(todayDiv + "" + "</div>");
+		    $content.find(".time:last").html(todaySpan + "" + "</span>");
 		}
 		else {
 		    if (this.showDate) {
-			$content.find(".time:last").html(todayDiv + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm") + "</div>");
+			$content.find(".time:last").html(todaySpan + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm") + "</span>");
 		    }
 		    else {
-			$content.find(".time:last").html(todayDiv + startTime.getDate().toString("HH:mm") + "</div>");
+			$content.find(".time:last").html(todaySpan + startTime.getDate().toString("HH:mm") + "</span>");
 		    }
 		}
 		
 		if (location == "") {
-		    $content.find(".location:last").html(todayDiv + location + "</div>");
+		    $content.find(".location:last").html(todaySpan + location + "</span>");
 		}
 		else {
-		    $content.find(".location:last").html(todayDiv + $content.find(".location:last").html() + location + "</div>");
+		    $content.find(".location:last").html(todaySpan + $content.find(".location:last").html() + location + "</span>");
 		}
 		
-		$content.find(".description:last").html(todayDiv + eventEntry.getContent().getText() + "</div>");
+		$content.find(".description:last").html(todaySpan + eventEntry.getContent().getText() + "</span>");
 	    }
 	}	
     }
