@@ -14,6 +14,11 @@
 	    #scroller {
 		padding: 0 20px;
 	    }
+
+	    #scrollEnd {
+		width: 100%;
+		border-bottom: 5px double gray;
+	    }
 	    .day {
 		padding-top: 10px;
 	    }
@@ -73,6 +78,7 @@
 			    </ul>
 			</li>
 		    </ul>
+		    <span id="scrollEnd"></span>
 		</div>
 	    </div>
 	    ]]>
