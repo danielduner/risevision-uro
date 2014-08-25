@@ -521,13 +521,12 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		isAllDay = true;
 	    }
 
-	    var currentDay = Date.today();
-	
 	    if (this.isTabbed) {
 		$content = this.tabs.addEvent(this.layout, startTime);
 	    }
 	    else {
 		var self = this;
+	    	var currentDay = Date.today();
 
 		//Add event to appropriate day.
 		$(".day").each(function (i) {
@@ -540,6 +539,7 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		});
 	    }
 
+	    var currentDay = Date.today();
 	    var todaySpan = "<span>";
 	    if (currentDay.compareTo(startTime.getDate().clone().clearTime()) == 0) {
 		todaySpan = "<span style='color:black'>";
