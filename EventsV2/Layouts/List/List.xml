@@ -16,7 +16,6 @@
 	    }
 
 	    #scrollEnd {
-		width: 100%;
 		border-bottom: 5px double gray;
 	    }
 	    .day {
@@ -77,8 +76,8 @@
 			    <ul class="events">
 			    </ul>
 			</li>
+			<li id="scrollEnd">&nbsp;</li>
 		    </ul>
-		    <span id="scrollEnd"></span>
 		</div>
 	    </div>
 	    ]]>
