@@ -517,11 +517,6 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 	    var startTime = times[j].getStartTime();
 	    var isAllDay = false;
 
-	    var todayDiv = "<div>";
-	    if (currentDay.compareTo(startTime.getDate().clone().clearTime()) == 0) {
-		todayDiv = "<div style='color:black'>";
-	    }
-
 	    if (startTime.isDateOnly()) {	//All Day event
 		isAllDay = true;
 	    }
@@ -542,6 +537,11 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		    
 		    currentDay.setDate(currentDay.getDate() + 1);
 		});
+	    }
+
+	    var todayDiv = "<div>";
+	    if (currentDay.compareTo(startTime.getDate().clone().clearTime()) == 0) {
+		todayDiv = "<div style='color:black'>";
 	    }
 
 	    //Add event.
