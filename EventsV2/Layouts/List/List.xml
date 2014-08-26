@@ -43,8 +43,8 @@
 	    <div id="eventsContainer" class="scrollContainer">
 		<div class="content">
 		    <ul id="scroller">
-			<li class="today eventsContainer">
-			    <div class="day day_font-style"></div>
+			<li class="eventsContainer">
+			    <div class="day today day_font-style"></div>
 			    <ul class="events">
 			    </ul>
 			</li>
