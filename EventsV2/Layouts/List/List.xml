@@ -19,6 +19,7 @@
 	    }
 	    .today {
 		color: black;
+		border-top: 5px double gray;
 	    }
 	    .timeSpace {
 		padding-right: 10px;
