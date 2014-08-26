@@ -19,7 +19,6 @@
 	    }
 	    .today {
 		color: black;
-		border-top: 5px double gray;
 	    }
 	    .timeSpace {
 		padding-right: 10px;
@@ -44,7 +43,7 @@
 	    <div id="eventsContainer" class="scrollContainer">
 		<div class="content">
 		    <ul id="scroller">
-			<li class="eventsContainer">
+			<li class="today eventsContainer">
 			    <div class="day day_font-style"></div>
 			    <ul class="events">
 			    </ul>
