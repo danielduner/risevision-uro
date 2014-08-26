@@ -14,10 +14,6 @@
 	    #scroller {
 		padding: 0 20px;
 	    }
-
-	    #scrollEnd {
-		border-bottom: 5px double gray;
-	    }
 	    .day {
 		padding-top: 10px;
 	    }
@@ -79,7 +75,6 @@
 			    <ul class="events">
 			    </ul>
 			</li>
-			<li id="scrollEnd">&nbsp;</li>
 		    </ul>
 		</div>
 	    </div>
