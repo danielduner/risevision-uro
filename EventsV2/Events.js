@@ -369,7 +369,7 @@ RiseVision.Events.EventWidget.prototype.initDays = function() {
 	    $day.text("idag - " + currentDay.toString("dddd - d MMMM"));
 	}
 	else {
-	    $day.text(currentDay.toString("dddd - d MMMM") + "    ");
+	    $day.text(currentDay.toString("dddd - d MMMM"));
 	}
 	
 	currentDay.setDate(currentDay.getDate() + 1);
@@ -559,10 +559,10 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		}
 		else {
 		    if (this.showDate) {
-			$content.find(".time:last").html(todaySpan + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm") + "</span>");
+			$content.find(".time:last").html(todaySpan + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm") + "&nbsp;&nbsp;&nbsp;&nbsp;</span>");
 		    }
 		    else {
-			$content.find(".time:last").html(todaySpan + startTime.getDate().toString("HH:mm") + "</span>");
+			$content.find(".time:last").html(todaySpan + startTime.getDate().toString("HH:mm") + "&nbsp;&nbsp;&nbsp;&nbsp;</span>");
 		    }
 		}
 		
