@@ -17,6 +17,9 @@
 	    .day {
 		padding-top: 10px;
 	    }
+	    .today {
+		color: black;
+	    }
 	    .timeSpace {
 		padding-right: 10px;
 	    }	
