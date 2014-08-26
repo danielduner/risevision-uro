@@ -559,10 +559,10 @@ RiseVision.Events.EventWidget.prototype.showEvents = function(result) {
 		}
 		else {
 		    if (this.showDate) {
-			$content.find(".time:last").html(todaySpan + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm") + "&nbsp;&nbsp;&nbsp;&nbsp;</span>");
+			$content.find(".time:last").html(todaySpan + $content.find(".time:last").html() + startTime.getDate().toString("HH:mm") + "&nbsp;&nbsp;&nbsp;</span>");
 		    }
 		    else {
-			$content.find(".time:last").html(todaySpan + startTime.getDate().toString("HH:mm") + "&nbsp;&nbsp;&nbsp;&nbsp;</span>");
+			$content.find(".time:last").html(todaySpan + startTime.getDate().toString("HH:mm") + "&nbsp;&nbsp;&nbsp;</span>");
 		    }
 		}
 		
