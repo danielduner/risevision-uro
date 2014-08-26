@@ -21,6 +21,9 @@
 	    .day {
 		padding-top: 10px;
 	    }
+	    .timeSpace {
+		padding-right: 10px;
+	    }	
 	    .events {
 		padding: 10px 20px 0px 20px;
 		border-bottom: 1px solid gray;
